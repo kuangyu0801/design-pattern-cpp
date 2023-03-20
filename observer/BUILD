@@ -23,5 +23,8 @@ cc_test(
     name = "observer_exercise_test",
     size = "small",
     srcs = ["observer_exercise_test.cc"],
-    deps = ["@com_google_googletest//:gtest_main"],
+    deps = [
+        ":game",
+        ":rat_impl",
+        "@com_google_googletest//:gtest_main"],
 )
