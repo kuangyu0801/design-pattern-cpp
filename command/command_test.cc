@@ -1,8 +1,7 @@
 #include "gtest/gtest.h"
-
 #include "public/bank_account.h"
-#include "public/composite_bank_account_command.h"
 #include "public/bank_account_command.h"
+#include "public/composite_bank_account_command.h"
 
 TEST(CommandPattern, Basic) {
   BankAccount account;

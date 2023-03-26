@@ -3,8 +3,7 @@
 #include <iostream>
 
 class BankAccount {
-
-public:
+ public:
   int balance_ = 0;
   int overdraft_limit = -500;
 
