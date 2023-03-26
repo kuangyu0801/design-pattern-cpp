@@ -28,3 +28,16 @@ Decorator pattern allows a user to add new functionality to an existing object w
 
 
 # Chain of Responsibiliy
+
+
+# Command
+- command query seperation
+
+BIG PICTURE
+Use the Command pattern when you want to execute queue operations, schedule their execution, or execute them remotely.
+Imagine a job queue: you add commands to the queue on one end, and on the other end sit a group of threads. Threads run the following script: they remove a command from the queue, call its execute() method, wait for the call to finish, then discard the command object and retrieve a new one.
+
+Use the Command pattern when you want to parameterise objects with operations and you don’t have a common interface.
+The Command pattern can turn a specific method call into a stand-alone object. This change opens up a lot of interesting uses: you can pass commands as method arguments, store them inside other objects, switch linked commands at runtime, etc.
+
+https://faun.pub/head-first-design-patterns-using-go-5-encapsulating-invocation-the-command-pattern-2f8c0a79d1c7
