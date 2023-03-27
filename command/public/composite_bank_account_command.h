@@ -8,12 +8,12 @@ class CompositeBankAccountCommand : public std::vector<BankAccountCommand>,
   CompositeBankAccountCommand(const std::initializer_list<value_type>& items)
       : vector<BankAccountCommand>(items) {}
 
-  void Call() const override {
+  void Call() override {
     for (auto& cmd : *this)
       cmd.Call();
   }
 
-  void Undo() const override {
+  void Undo() override {
     for (auto& cmd : *this)
       cmd.Undo();
   }

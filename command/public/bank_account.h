@@ -13,11 +13,13 @@ class BankAccount {
               << "\n";
   }
 
-  void Withdraw(int amount) {
+  bool Withdraw(int amount) {
     if (balance_ - amount >= overdraft_limit) {
       balance_ -= amount;
       std::cout << "withdrew " << amount << ", balance_ now " << balance_
                 << "\n";
+      return true;
     }
+    return false;
   }
 };

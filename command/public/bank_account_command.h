@@ -13,28 +13,32 @@ class BankAccountCommand : public Command {
   BankAccountCommand(BankAccount& account,
                      const Action action,
                      const int amount)
-      : account(account), action(action), amount_(amount) {}
+      : account(account), action(action), amount_(amount) {
+    is_successful_ = false;
+  }
 
-  void Call() const override {
+  void Call() override {
     switch (action) {
       case kDeposit:
         account.Deposit(amount_);
+        is_successful_ = true;
         break;
       case kWithdraw:
-        account.Withdraw(amount_);
+        is_successful_ = account.Withdraw(amount_);
         break;
       default:
         break;
     }
   }
 
-  void Undo() const override {
+  void Undo() override {
     switch (action) {
       case kWithdraw:
         account.Deposit(amount_);
+        is_successful_ = true;
         break;
       case kDeposit:
-        account.Withdraw(amount_);
+        is_successful_ = account.Withdraw(amount_);
         break;
       default:
         break;

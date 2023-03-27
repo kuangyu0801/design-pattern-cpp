@@ -1,8 +1,9 @@
 #pragma once
 
 class Command {
-public:
+ public:
   virtual ~Command() = default;
-  virtual void Call() const = 0;
-  virtual void Undo() const = 0;
+  virtual void Call() = 0;
+  virtual void Undo() = 0;
+  bool is_successful_;
 };
