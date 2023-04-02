@@ -41,3 +41,16 @@ Use the Command pattern when you want to parameterise objects with operations an
 The Command pattern can turn a specific method call into a stand-alone object. This change opens up a lot of interesting uses: you can pass commands as method arguments, store them inside other objects, switch linked commands at runtime, etc.
 
 https://faun.pub/head-first-design-patterns-using-go-5-encapsulating-invocation-the-command-pattern-2f8c0a79d1c7
+
+
+# Interpreter
+
+- Textual input to be processed in OOP structure.
+- processing structured text data (lexing, parsing)
+
+
+# Mediator Pattern
+
+The intent of the Mediator Pattern is to reduce the complexity and dependencies between tightly coupled objects communicating directly with one another. This is achieved by creating a mediator object that takes care of the interaction between dependent objects. Consequently, all the communication goes through the mediator.
+
+![](/docs/images/mediator_pattern.png)
