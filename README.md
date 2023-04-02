@@ -4,6 +4,11 @@ Repo is for practice design pattern in modern C++.
 
 - course: https://www.udemy.com/course/patterns-cplusplus/
 
+# SOLID design principle
+
+- Dependency Inversion Principle (DIP)
+
+-  high-level modules should not depend on low-level modules. Instead, they should both depend on abstractions
 
 
 Decorator Pattern:
