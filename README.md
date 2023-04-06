@@ -6,6 +6,14 @@ Repo is for practice design pattern in modern C++.
 
 # SOLID design principle
 
+
+- Principle #1: The Open-Closed Principle (OCP)
+OCP is about allowing change, but doing it without requiring you to modify existing code.
+
+Classes should be open for extension, and closed for modification.
+
+Once you have a class that works and is being used, you don't want to make changes to it unless you have to. Change is a constant in software development. With OCP, we allow for change through extension rather than through modification of existing code.
+
 - Dependency Inversion Principle (DIP)
 
 -  high-level modules should not depend on low-level modules. Instead, they should both depend on abstractions
