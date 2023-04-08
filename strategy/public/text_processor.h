@@ -41,7 +41,32 @@ class TextProcessor {
   string Str() const { return oss_.str(); }
 
  private:
- private:
   std::ostringstream oss_;
   std::unique_ptr<ListStrategy> strategy_;
+};
+
+// Strategy is determined at compile time.
+template <typename ListStrategy>
+class StaticTextProcessor {
+  using string = std::string;
+
+ public:
+  void Clear() {
+    oss_.str("");
+    oss_.clear();
+  }
+
+  void AppendList(const std::vector<string>& items) {
+    strategy_.Start(oss_);
+    for (auto& item : items) {
+      strategy_.AddListItem(oss_, item);
+    }
+    strategy_.End(oss_);
+  }
+
+  string Str() const { return oss_.str(); }
+
+ private:
+  std::ostringstream oss_;
+  ListStrategy strategy_;
 };

@@ -7,12 +7,20 @@ cc_library(
     ],
 )
 
+cc_library(
+    name = "discriminant_strategy",
+    hdrs = [
+        "public/discriminant_strategy.h",
+        "public/quadratic_equation_solver.h",
+    ],
+)
+
 cc_test(
-    name = "dynamic_strategy_test",
+    name = "discriminant_strategy_test",
     size = "small",
-    srcs = ["strategy_test.cc"],
+    srcs = ["discriminant_strategy_test.cc"],
     deps = [
-        ":dynamic_strategy",
+        ":discriminant_strategy",
         "@com_google_googletest//:gtest_main",
     ],
 )

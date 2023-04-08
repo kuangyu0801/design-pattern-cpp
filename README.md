@@ -35,6 +35,12 @@ Decorator pattern allows a user to add new functionality to an existing object w
 
 # Strategy
 
+Strategy Pattern 的優缺點
+Strategy Pattern 的優點是可以讓我們在 runtime 時，自由地去切換需要的 strategy，提供更大的彈性。另外，因為不同的邏輯都各自存放在不同的 strategy class 裡面，所以也更好維護和擴充。
+
+Strategy Pattern vs Template Pattern
+Template Pattern 是透過 inheritance 的方式，產生不同的 subclass，來改變一個功能中的某些部分。Strategy Pattern 則是透過 composition 的方式，把不同的 strategy 放到 context 中，來改變一個功能中的某些部分。因此 Template Pattern 的改變是 class 層的變化也是靜態的，而strategy pattern 的改變是 object 層的變化，它是相對動態的，它可以在執行過程中再去改變。
+
 # Proxy vs Decorator
 - Proxy: identical interface via inheritance
 - Decorator: enhanced interface via aggregate
@@ -67,3 +73,8 @@ https://faun.pub/head-first-design-patterns-using-go-5-encapsulating-invocation-
 The intent of the Mediator Pattern is to reduce the complexity and dependencies between tightly coupled objects communicating directly with one another. This is achieved by creating a mediator object that takes care of the interaction between dependent objects. Consequently, all the communication goes through the mediator.
 
 ![](/docs/images/mediator_pattern.png)
+
+
+# Unit Test
+
+```bazel test --test_output=all //solid_ocp:ocp_test```
