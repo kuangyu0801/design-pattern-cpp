@@ -5,7 +5,7 @@ Repo is for practice design pattern in modern C++.
 - course: https://www.udemy.com/course/patterns-cplusplus/
 
 # SOLID design principle
-
+- The SOLID Principles, Explained with Motivational Posters: https://www.globalnerdy.com/2009/07/15/the-solid-principles-explained-with-motivational-posters/
 
 - Principle #1: The Open-Closed Principle (OCP)
 OCP is about allowing change, but doing it without requiring you to modify existing code.
