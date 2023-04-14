@@ -16,10 +16,21 @@ Once you have a class that works and is being used, you don't want to make chang
 
 - Dependency Inversion Principle (DIP)
 
--  high-level modules should not depend on low-level modules. Instead, they should both depend on abstractions
+-  high-level modules should not depend on low-level modules. 
+Instead, they should both depend on abstractions
+
+-  Interface Segregation Principle(ISP)
+
+If a class exposes so many members that those members can be broken down into
+groups that serve different clients that don’t use members from the other groups
+, you should think about exposing those member groups as separate interfaces.
+
+larger interfaces should be split into smaller ones. By doing so, we can ensure
+that implementing classes only need to be concerned about the methods that are
+of interest to them.
 
 
-Decorator Pattern:
+# Decorator Pattern
 https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
 
 Decorator pattern allows a user to add new functionality to an existing object without altering its structure. This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.
