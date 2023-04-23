@@ -23,7 +23,8 @@ class HtmlElement {
   HtmlElement() {}
   HtmlElement(const string& name, const string& text)
       : name(name), text(text) {}
-public:
+
+ public:
   string Str(int indent = 0) const {
     std::ostringstream oss;
     string i(indent_size * indent, ' ');
@@ -65,9 +66,7 @@ struct HtmlBuilder {
 
   string Str() { return root.Str(); }
 
-  HtmlElement Build() const {
-    return root;
-  }
+  HtmlElement Build() const { return root; }
   operator HtmlElement() const { return root; }
   HtmlElement root;
 };
