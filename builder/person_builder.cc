@@ -3,10 +3,10 @@
 #include "public/person_job_builder.h"
 
 
-PersonAddressBuilder PersonBuilderBase::lives() const {
-  return PersonAddressBuilder{person};
+PersonAddressBuilder PersonBuilderBase::Lives() const {
+  return PersonAddressBuilder{person_};
 }
 
-PersonJobBuilder PersonBuilderBase::works() const {
-  return PersonJobBuilder{person};
+PersonJobBuilder PersonBuilderBase::Works() const {
+  return PersonJobBuilder{person_};
 }

@@ -6,21 +6,23 @@ class PersonJobBuilder;
 
 class PersonBuilderBase {
  protected:
-  Person& person;
-  explicit PersonBuilderBase(Person& person) : person{person} {}
+  // Only a reference.
+  Person& person_;
+  explicit PersonBuilderBase(Person& person) : person_{person} {}
 
  public:
-  operator Person() const { return std::move(person); }
+  operator Person() const { return std::move(person_); }
 
   // builder facets
 
-  PersonAddressBuilder lives() const;
-  PersonJobBuilder works() const;
+  PersonAddressBuilder Lives() const;
+  PersonJobBuilder Works() const;
 };
 
 class PersonBuilder : public PersonBuilderBase {
-  Person p;
+ private:
+  Person person_;
 
  public:
-  PersonBuilder() : PersonBuilderBase{p} {}
+  PersonBuilder() : PersonBuilderBase{person_} {}
 };

@@ -6,46 +6,47 @@
 class PersonBuilder;
 
 class Person {
+  private:
   // address
-  std::string street_address, post_code, city;
+  std::string street_address_, post_code_, city_;
 
   // employment
-  std::string company_name, position;
-  int annual_income = 0;
-
+  std::string company_name_, position_;
+  int annual_income_ = 0;
+  // private constructor to force builder
   Person() { std::cout << "Person created\n"; }
 
  public:
   ~Person() { std::cout << "Person destroyed\n"; }
 
-  static PersonBuilder create();
+  static PersonBuilder Create();
 
   Person(Person&& other)
-      : street_address{move(other.street_address)},
-        post_code{move(other.post_code)},
-        city{move(other.city)},
-        company_name{move(other.company_name)},
-        position{move(other.position)},
-        annual_income{other.annual_income} {}
+      : street_address_{std::move(other.street_address_)},
+        post_code_{std::move(other.post_code_)},
+        city_{std::move(other.city_)},
+        company_name_{std::move(other.company_name_)},
+        position_{std::move(other.position_)},
+        annual_income_{other.annual_income_} {}
 
   Person& operator=(Person&& other) {
     if (this == &other)
       return *this;
-    street_address = move(other.street_address);
-    post_code = move(other.post_code);
-    city = move(other.city);
-    company_name = move(other.company_name);
-    position = move(other.position);
-    annual_income = other.annual_income;
+    street_address_ = std::move(other.street_address_);
+    post_code_ = std::move(other.post_code_);
+    city_ = std::move(other.city_);
+    company_name_ = std::move(other.company_name_);
+    position_ = std::move(other.position_);
+    annual_income_ = other.annual_income_;
     return *this;
   }
 
   friend std::ostream& operator<<(std::ostream& os, const Person& obj) {
-    return os << "street_address: " << obj.street_address
-              << " post_code: " << obj.post_code << " city: " << obj.city
-              << " company_name: " << obj.company_name
-              << " position: " << obj.position
-              << " annual_income: " << obj.annual_income;
+    return os << "street_address: " << obj.street_address_
+              << " post_code: " << obj.post_code_ << " city: " << obj.city_
+              << " company_name: " << obj.company_name_
+              << " position: " << obj.position_
+              << " annual_income: " << obj.annual_income_;
   }
 
   friend class PersonBuilder;

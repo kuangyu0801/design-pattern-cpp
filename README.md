@@ -30,6 +30,17 @@ that implementing classes only need to be concerned about the methods that are
 of interest to them.
 
 
+Gamma Categorization
+
+
+# Builder Pattern
+
+The intent of the Builder design pattern is to separate the construction of a complex object from its representation.
+
+Exmaple
+
+![](/docs/images/person_builder_example.png)
+
 # Decorator Pattern
 https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
 
@@ -84,6 +95,9 @@ https://faun.pub/head-first-design-patterns-using-go-5-encapsulating-invocation-
 The intent of the Mediator Pattern is to reduce the complexity and dependencies between tightly coupled objects communicating directly with one another. This is achieved by creating a mediator object that takes care of the interaction between dependent objects. Consequently, all the communication goes through the mediator.
 
 ![](/docs/images/mediator_pattern.png)
+
+
+- [ Day 1 ] 我為什麼想學設計模式 ( Design Pattern ): https://ithelp.ithome.com.tw/articles/10201706
 
 
 # Unit Test

@@ -11,18 +11,18 @@ class PersonAddressBuilder : public PersonBuilderBase {
  public:
   explicit PersonAddressBuilder(Person& person) : PersonBuilderBase{person} {}
 
-  Self& at(std::string street_address) {
-    person.street_address = street_address;
+  Self& At(std::string street_address) {
+    person_.street_address_ = street_address;
     return *this;
   }
 
-  Self& with_postcode(std::string post_code) {
-    person.post_code = post_code;
+  Self& WithPostcode(std::string post_code) {
+    person_.post_code_ = post_code;
     return *this;
   }
 
-  Self& in(std::string city) {
-    person.city = city;
+  Self& In(std::string city) {
+    person_.city_ = city;
     return *this;
   }
 };
