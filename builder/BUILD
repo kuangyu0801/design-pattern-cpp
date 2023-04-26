@@ -4,6 +4,11 @@ cc_library(
 )
 
 cc_library(
+    name = "code_builder",
+    hdrs = ["public/code_builder.h"],
+)
+
+cc_library(
     name = "tag",
     hdrs = ["public/tag.h"],
 )
@@ -29,6 +34,16 @@ cc_test(
     srcs = ["builder_test.cc"],
     deps = [
         ":builder",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "code_builder_test",
+    size = "small",
+    srcs = ["code_builder_test.cc"],
+    deps = [
+        ":code_builder",
         "@com_google_googletest//:gtest_main",
     ],
 )
