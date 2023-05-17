@@ -68,6 +68,10 @@ Template Pattern 是透過 inheritance 的方式，產生不同的 subclass，�
 - Decorator: enhanced interface via aggregate
 
 
+# State Pattern
+
+![](/docs/images/state_pattern.png)
+
 # Chain of Responsibiliy
 
 
@@ -103,3 +107,7 @@ The intent of the Mediator Pattern is to reduce the complexity and dependencies 
 # Unit Test
 
 ```bazel test --test_output=all //solid_ocp:ocp_test```
+
+
+# C++ Trivial
+C++中换行endl和\n的区别: https://blog.csdn.net/u011675745/article/details/51939094
