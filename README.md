@@ -41,6 +41,19 @@ Exmaple
 
 ![](/docs/images/person_builder_example.png)
 
+
+# Factory Pattern
+Motivation
+- Object creation is convoluted
+- Constructor is not descriptive
+- Object creation (non-piecewise, unlike Builder) cab be outsourced to
+  - A separate function
+  - A separate class
+
+Factory 
+- static method
+- separate class with 
+
 # Decorator Pattern
 https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
 
