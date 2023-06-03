@@ -10,7 +10,7 @@
 struct HotDrink;
 
 class DrinkFactory {
-  // Composition  
+  // Composition
   map<string, unique_ptr<HotDrinkFactory>> hot_factories;
 
  public:
@@ -26,13 +26,13 @@ class DrinkFactory {
   }
 };
 
+// This is a functional approach compared with abstract/inheritance approach.
 class DrinkWithVolumeFactory {
   // Storing callable objects as value in a map.
   map<string, function<unique_ptr<HotDrink>()>> factories;
 
  public:
   DrinkWithVolumeFactory() {
-
     factories["tea"] = [] {
       auto tea = make_unique<Tea>();
       tea->prepare(200);

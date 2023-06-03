@@ -122,5 +122,9 @@ The intent of the Mediator Pattern is to reduce the complexity and dependencies 
 ```bazel test --test_output=all //solid_ocp:ocp_test```
 
 
+# UML Diagram
+
+- https://www.javatpoint.com/uml-class-diagram
+
 # C++ Trivial
 C++中换行endl和\n的区别: https://blog.csdn.net/u011675745/article/details/51939094

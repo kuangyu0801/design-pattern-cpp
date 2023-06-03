@@ -3,6 +3,26 @@ cc_library(
     hdrs = ["public/factory.h"],
 )
 
+cc_library(
+    name = "drink_factory_lib",
+    hdrs = ["public/coffee_factory.h",
+    "public/tea_factory.h",
+    "public/drink_factory.h",
+    "public/factory.h",
+    "public/hot_drink_factory.h",
+    "public/hot_drink.h"],
+)
+
+cc_test(
+    name = "drink_factory_test",
+    size = "small",
+    srcs = ["hot_drink_factory_test.cc"],
+    deps = [
+        ":drink_factory_lib",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
 cc_test(
     name = "factory_test",
     size = "small",
