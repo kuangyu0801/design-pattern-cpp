@@ -5,30 +5,17 @@
 using namespace std;
 
 class Creature {
-public:
-    std::string name_;
-    int attack_;
-    int defense_;
+ public:
 
-  Creature(const string& name, const int attack, const int defense)
-    : name_(name),
-      attack_(attack),
-      defense_(defense)
-  {
+  explicit Creature(const string& name, const int attack, const int defense)
+      : name_(name), attack_(attack), defense_(defense) {}
+
+  friend ostream& operator<<(ostream& os, const Creature& obj) {
+    return os << "name: " << obj.name_ << " attack: " << obj.attack_
+              << " defense: " << obj.defense_;
   }
 
-
-  friend ostream& operator<<(ostream& os, const Creature& obj)
-  {
-    return os
-      << "name: " << obj.name_
-      << " attack: " << obj.attack_
-      << " defense: " << obj.defense_;
-  }
+  std::string name_;
+  int attack_;
+  int defense_;
 };
-
-
-
-
-
-
