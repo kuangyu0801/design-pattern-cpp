@@ -5,21 +5,28 @@ Repo is for practice design pattern in modern C++.
 - course: https://www.udemy.com/course/patterns-cplusplus/
 
 # SOLID design principle
+
 - The SOLID Principles, Explained with Motivational Posters: https://www.globalnerdy.com/2009/07/15/the-solid-principles-explained-with-motivational-posters/
 
-- Principle #1: The Open-Closed Principle (OCP)
+- Principle #1: Single Responsibility Principle (SRP)
+
+Every object should have a single responsibility and that all of its services should be aligned with that responsibility. 
+“Responsibility” is defined as “a reason to change”.
+
+- Principle #2: The Open-Closed Principle (OCP)
+
 OCP is about allowing change, but doing it without requiring you to modify existing code.
 
 Classes should be open for extension, and closed for modification.
 
 Once you have a class that works and is being used, you don't want to make changes to it unless you have to. Change is a constant in software development. With OCP, we allow for change through extension rather than through modification of existing code.
 
-- Dependency Inversion Principle (DIP)
+- Principle #3: Dependency Inversion Principle (DIP)
 
--  high-level modules should not depend on low-level modules. 
-Instead, they should both depend on abstractions
+High-level modules should not depend on low-level modules. 
+Instead, they should both depend on abstractions.
 
--  Interface Segregation Principle(ISP)
+- Principle #4: Interface Segregation Principle(ISP)
 
 If a class exposes so many members that those members can be broken down into
 groups that serve different clients that don’t use members from the other groups
