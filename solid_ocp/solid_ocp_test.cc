@@ -25,7 +25,7 @@ class OpenClosePrincipleTest : public ::testing::Test {
 TEST_F(OpenClosePrincipleTest, NonExtensibleFilter) {
   ProductFilter product_fileter;
   vector<Product*> blue_products =
-      product_fileter.by_color(products_, Color::kBlue);
+      product_fileter.FilterByColor(products_, Color::kBlue);
   EXPECT_EQ(blue_products.size(), 1);
   EXPECT_EQ(blue_products.at(0), &house_);
 }
@@ -33,7 +33,8 @@ TEST_F(OpenClosePrincipleTest, NonExtensibleFilter) {
 TEST_F(OpenClosePrincipleTest, ExtensibleFilter) {
   BetterFilter better_filter;
   ColorSpecification color_spec(Color::kBlue);
-  vector<Product*> blue_products = better_filter.filter(products_, color_spec);
+  vector<Product*> blue_products =
+      better_filter.FilterBySpec(products_, color_spec);
   EXPECT_EQ(blue_products.size(), 1);
   EXPECT_EQ(blue_products.at(0), &house_);
 }

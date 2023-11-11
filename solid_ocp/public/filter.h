@@ -5,7 +5,8 @@
 #include "specification.h"
 
 template <typename T>
-struct Filter {
-  virtual std::vector<T*> filter(std::vector<T*> items,
+class Filter {
+  public:
+  virtual std::vector<T*> FilterBySpec(std::vector<T*> items,
                                  Specification<T>& spec) = 0;
 };

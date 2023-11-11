@@ -4,12 +4,14 @@
 #include "product.h"
 #include "specification.h"
 
-struct ColorSpecification : Specification<Product> {
-  Color color;
+class ColorSpecification : public Specification<Product> {
+ public:
+  ColorSpecification(Color color) : color_(color) {}
 
-  ColorSpecification(Color color) : color(color) {}
-
-  bool is_satisfied(Product* item) const override {
-    return item->color == color;
+  bool IsSatisfied(Product* item) const override {
+    return (item->color == color_);
   }
+
+ private:
+  Color color_;
 };

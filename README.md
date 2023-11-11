@@ -21,6 +21,8 @@ Classes should be open for extension, and closed for modification.
 
 Once you have a class that works and is being used, you don't want to make changes to it unless you have to. Change is a constant in software development. With OCP, we allow for change through extension rather than through modification of existing code.
 
+![](docs/images/solid_ocp_example.jpeg)
+
 - Principle #3: Dependency Inversion Principle (DIP)
 
 High-level modules should not depend on low-level modules. 
