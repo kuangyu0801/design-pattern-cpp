@@ -42,6 +42,14 @@ of interest to them.
 Gamma Categorization
 
 
+# Adapter Pattern
+
+Adapter Pattern
+converts the interface of a class into another interface the clients expect.
+Adapter lets classes work together that couldn't otherwise because of incompatible interfaces
+
+![](/docs/images/adapter_example.png)
+
 # Builder Pattern
 
 The intent of the Builder design pattern is to separate the construction of a complex object from its representation.
