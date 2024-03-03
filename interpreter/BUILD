@@ -1,6 +1,6 @@
 cc_library(
     name = "exercise_lib",
-    src = ["exercise.cc"],
+    srcs = ["exercise.cc"],
     hdrs = ["public/exercise.h"],
 )
 
