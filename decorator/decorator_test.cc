@@ -52,7 +52,6 @@ TEST(Decorator, StaticDecoratorShape) {
 
 TEST(Decorator, StaticFunctionDecoratorWithoutArgReturn) {
   // Logger([]() {cout << "Hello" << endl; }, "HelloFunction")();
-
   // cannot do this
   // make_logger2([]() {cout << "Hello" << endl; }, "HelloFunction")();
   auto call =
@@ -60,18 +59,16 @@ TEST(Decorator, StaticFunctionDecoratorWithoutArgReturn) {
   call();
 }
 
-double Add(double a, double b)
-{
+double Add(double a, double b) {
   cout << a << "+" << b << "=" << (a + b) << endl;
   return a + b;
 }
 
 TEST(Decorator, StaticFunctionDecoratorWithArgReturn) {
   auto call =
-  //    StaticLoggerArgs<double(double, double)>(Add, "HelloFunction");
-  MakeStaticLoggerArgs(Add, "HelloFunction");
+      // StaticLoggerArgs<double(double, double)>(Add, "HelloFunction");
+      MakeStaticLoggerArgs(Add, "HelloFunction");
   EXPECT_EQ(call(1.5, 2.2), 3.7);
 }
-
 
 }  // namespace
