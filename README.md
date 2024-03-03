@@ -4,7 +4,20 @@ Repo is for practice design pattern in modern C++.
 
 - course: https://www.udemy.com/course/patterns-cplusplus/
 
-# SOLID design principle
+# Objective-Oriented
+
+Basics:
+- Abstraction
+- Encapsulation
+- Polymorphism
+- Inheritance
+
+Principles:
+- Encapsulate what varies.
+- Favor composition over inheritance.
+- Program to interfaces, not implemtation.
+
+# SOLID Design Principles
 
 - The SOLID Principles, Explained with Motivational Posters: https://www.globalnerdy.com/2009/07/15/the-solid-principles-explained-with-motivational-posters/
 
