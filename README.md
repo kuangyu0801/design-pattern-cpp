@@ -94,9 +94,7 @@ Decorator pattern allows a user to add new functionality to an existing object w
 - 比較 DRY (Don't Repeat Yourself)
  Template Pattern 也會讓你受制於 base class 所定下的設計，因而失去了一些彈性。另外使用 Template Pattern 的時候，要小心不要為了重用部分的功能，而把不太相關的 class 硬湊在一起，不正確的抽象化常常會讓程式碼變得很難維護。
 - https://ithelp.ithome.com.tw/articles/10220163
-# Proxy
-- preserve the interface
-- change the underlying implementation
+
 
 # Strategy
 
@@ -106,7 +104,15 @@ Strategy Pattern 的優點是可以讓我們在 runtime 時，自由地去切換
 Strategy Pattern vs Template Pattern
 Template Pattern 是透過 inheritance 的方式，產生不同的 subclass，來改變一個功能中的某些部分。Strategy Pattern 則是透過 composition 的方式，把不同的 strategy 放到 context 中，來改變一個功能中的某些部分。因此 Template Pattern 的改變是 class 層的變化也是靜態的，而strategy pattern 的改變是 object 層的變化，它是相對動態的，它可以在執行過程中再去改變。
 
-# Proxy vs Decorator
+# Proxy Pattern
+
+A class that functions as an interface to a particular resources.
+That resource may be remote, expensive to construct, or may require logging or some other added functionality.
+
+- preserve the interface
+- change the underlying implementation
+
+## Proxy vs Decorator
 - Proxy: identical interface via inheritance
 - Decorator: enhanced interface via aggregate
 
@@ -146,9 +152,13 @@ The intent of the Mediator Pattern is to reduce the complexity and dependencies 
 
 - [ Day 1 ] 我為什麼想學設計模式 ( Design Pattern ): https://ithelp.ithome.com.tw/articles/10201706
 
+# Prototype Pattern
+
+
 
 # Unit Test
 
+Show output log:
 ```bazel test --test_output=all //solid_ocp:ocp_test```
 
 
