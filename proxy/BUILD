@@ -5,6 +5,7 @@ cc_library(
         "public/property.h",
         "public/pingpong.h",
         "public/bitmap.h",
+        "public/person.h",
     ],
 )
 
