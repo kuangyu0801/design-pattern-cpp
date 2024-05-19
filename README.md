@@ -63,6 +63,10 @@ Adapter lets classes work together that couldn't otherwise because of incompatib
 
 ![](/docs/images/adapter_example.png)
 
+# Composite Pattern
+
+- A mechanisum for treating indivdual (scalar) objects and composions of objects in an uniform manner.
+
 # Builder Pattern
 
 The intent of the Builder design pattern is to separate the construction of a complex object from its representation.
@@ -83,6 +87,11 @@ Motivation
 Factory 
 - static method
 - separate class with 
+
+
+# Flyweight Pattern
+
+A space optimization technique that lets us uses less memory by storing externally the data associated with similar objects.
 
 # Decorator Pattern
 https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
@@ -154,7 +163,7 @@ The intent of the Mediator Pattern is to reduce the complexity and dependencies 
 
 # Prototype Pattern
 
-
+A partially or fully initialzed object that you copy(clone) and make use of.
 
 # Unit Test
 
