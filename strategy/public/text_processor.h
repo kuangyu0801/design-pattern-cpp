@@ -6,7 +6,11 @@
 #include <vector>
 
 #include "list_strategy.h"
-#include "output_format.h"
+
+enum class OutputFormat {
+  kMarkdown,
+  kHtml,
+};
 
 class TextProcessor {
   using string = std::string;

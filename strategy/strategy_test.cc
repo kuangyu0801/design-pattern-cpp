@@ -2,7 +2,6 @@
 
 #include "gtest/gtest.h"
 #include "public/list_strategy.h"
-#include "public/output_format.h"
 #include "public/text_processor.h"
 
 using namespace std;
@@ -12,13 +11,23 @@ TEST(Strategy, DynamicStratygy) {
   TextProcessor tp;
   tp.SetOutputFormat(OutputFormat::kMarkdown);
   tp.AppendList({"foo", "bar", "baz"});
+  // Expected output:
+  //  * foo
+  //  * bar
+  //  * baz
   cout << tp.Str() << endl;
 
-  // html
   tp.Clear();
+  // Switch to HTML.
   tp.SetOutputFormat(OutputFormat::kHtml);
   tp.AppendList({"foo", "bar", "baz"});
   cout << tp.Str() << endl;
+  // Expected output:
+  // <ul>
+  // <li>foo</li>
+  // <li>bar</li>
+  // <li>baz</li>
+  // </ul>
 }
 
 TEST(Strategy, StaticStratygy) {
