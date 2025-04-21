@@ -1,14 +1,16 @@
-#include "gtest/gtest.h"
-
 #include "public/person_factory.h"
 
-  TEST(Evaluate, SimplePersonTest)
-  {
-    PersonFactory pf;
+#include "gtest/gtest.h"
 
-    auto p1 = pf.create_person("Chris");
-    ASSERT_EQ("Chris", p1.name);
+namespace {
+TEST(Evaluate, SimplePersonTest) {
+  PersonFactory pf;
 
-    auto p2 = pf.create_person("Sarah");
-    ASSERT_EQ(1, p2.id) << "Expected the second created person's id to be = 1";
-  }
+  auto p1 = pf.CreatePerson("Chris");
+  ASSERT_EQ("Chris", p1.name);
+
+  auto p2 = pf.CreatePerson("Sarah");
+  ASSERT_EQ(1, p2.id) << "Expected the second created person's id to be = 1";
+}
+
+}  // namespace
