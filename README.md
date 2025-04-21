@@ -88,6 +88,10 @@ Exmaple
 
 ## Factory Pattern
 
+All factories encapsulates object creation.
+Factory pattern is a powerful technique for coding to abstractions, not concrete
+ class, which leads tomore decouple and flexible design.
+
 Motivation
 
 - Object creation is convoluted.
@@ -99,7 +103,7 @@ Motivation
 Factory
 
 - static method.
-- separate class with
+- separate class
 
 [geeksforgeeks example on factory](https://www.geeksforgeeks.org/factory-method-for-designing-pattern/)
 
